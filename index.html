@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <title>DECO HOME</title>
+</head>
+<body>
+    <!-- HEADER  -->
+    <div class="grid-container">
+        <div class="header-container">
+            <h1 class="title-name" id="title">DECO HOME
+            <img src="./assets/casita.png" alt="logo-casa" class="logo"></h1>
+            <div class="icon-wrapper">
+            <button id="carrito-btn">
+                <a href="#modal"><img src="assets/carrito.png" alt="carrito" class="img-carrito"></a>
+            </button>
+            </div>
+        </div>
+        <div class="search-area-container">
+            <input type="text" placeholder="Buscar..." class="search-input" id="buscar-input">
+            <button onclick="buscar();"  id="buscar" class="search-btn" >
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+    </div>
+
+    <div class="options-menu">
+        <a class="home-btn" href="#contacto"> CONTACTO </a>
+        <!-- <div class="dropdown">
+            <a class="products-btn dropbtn" href="">
+                PRODUCTOS
+            </a>
+            <div class="dropdown-content">
+              <a href="#">Living</a>
+              <a href="#">Cocina</a>
+              <a href="#">Comedor</a>
+            </div> 
+          </div> -->
+        <button id="btn-nosotros" class="btn-nos">
+            <a class="us-btn" href="#modal-nosotros"> NOSOTROS </a>
+        </button>
+    </div>
+    
+    <!-- CATALOGO  -->
+
+    <output class="main-container" id="contenedor">
+    
+    </output>
+
+    <div class="btn-container">
+        <button id="btn-ver-mas" class="btn-mas-prod">VER MÁS</button>
+    </div>
+    
+    <div class="form-wrapper">
+        <form id="contacto" class="formulario">
+            <h2 class="text-center">Contactanos</h2>
+            <div class="form-group">
+              <label for="exampleFormControlInput1">E-mail</label>
+              <input type="email" class="form-control" id="email" placeholder="nombre@ejemplo.com">
+            </div>
+            
+            <div class="form-group">
+              <label for="exampleFormControlTextarea1">Mensaje</label>
+              <textarea class="form-control" id="message" rows="3" placeholder="Ingresa tu mensaje aquí"></textarea>
+            </div>
+            <div class="envio-exitoso">
+                <button type="submit" class="btn btn-primary" disabled="disabled" id="enviar" value="send">Enviar</button>
+                <div id="cartel" class="cartel">
+                </div>
+            </div>
+          </form>
+        </div>
+    </div>
+    
+    <!-- FOOTER -->
+    <div class="footer">
+        <ul class="list-inline">
+            <li><a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a></li>
+            <li><a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a></li>
+        </ul>
+    </div>
+
+    <!-- ESCONDIDO -->
+    <div id="modal" class="modal-carrito">
+        <div id="carrito" class="carrito">
+            <button id="cerrar-carrito" class="cerrar-modal">
+                <i class="fas fa-times"></i>
+            </button>
+            <h1 class="title-carrito">
+                Carrito de compras 
+                <img src="assets/carrito.png" alt="carrito" class="img-carrito-titulo">
+            </h1>
+            <div id="lista-productos" class="carrito">
+            </div>
+            <div id="total-carrito" class="total-carrito">      
+                <p class="carrito-total">Total: <span id="resultado-total" class="carrito-total"></span>.-</p>          
+            </div>
+            <div class="btn-actions">
+                <button id="btn-volver" class="btn-comprar btn btn-primary">Volver</button>
+                <button class="btn-vaciar btn btn-danger" onclick="vaciarCarrito();">Vaciar</button>
+            </div>
+            
+        </div>
+    </div>
+
+    <div id="modal-nosotros" class="modal-nosotros">
+        <div class="nosotros-info">
+            <button id="cerrar-modal-us" class="cerrar-modal">
+                <i class="fas fa-times"></i>
+            </button>
+            <h1 class="title-carrito">NOSOTROS</h1>
+            <p class="parrafo-modal">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quas dolor aliquam ipsa ducimus velit asperiores magni rerum, officiis, cum, ex voluptas cupiditate necessitatibus fuga maxime commodi. Officiis, laudantium odio.
+            </p>
+        </div>
+    </div>
+
+    <!-- VINCULO CON AJAX, JQUERY, SCRIPT Y FONT AWESOME -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
+    <script>
+        $(document).ready(function (){
+            console.log("El DOM esta listo!");
+        })
+    </script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+        emailjs.init("user_B5kL8W88HjNSuM9XLLhAO");
+        })();
+    </script>
+    <script src="https://kit.fontawesome.com/995aed6788.js" crossorigin="anonymous"></script>
+    <script src="./script/script.js"></script>
+    <script src="./script/formulario.js"></script>
+</body>
+</html>
