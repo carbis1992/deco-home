@@ -18,8 +18,9 @@
             <h1 class="title-name" id="title">DECO HOME
             <img src="./assets/casita.png" alt="logo-casa" class="logo"></h1>
             <div class="icon-wrapper">
-            <button id="carrito-btn">
+            <button id="carrito-btn" class="carrito-cant">
                 <a href="#modal"><img src="assets/carrito.png" alt="carrito" class="img-carrito"></a>
+                <p id="cant-prod-carrito"><span id="cant-producto"></span></p>
             </button>
             </div>
         </div>
@@ -71,14 +72,15 @@
               <textarea class="form-control" id="message" rows="3" placeholder="Ingresa tu mensaje aquí"></textarea>
             </div>
             <div class="envio-exitoso">
-                <button type="submit" class="btn btn-primary" disabled="disabled" id="enviar" value="send">Enviar</button>
+                <button type="submit" class="btn btn-primary" disabled="disabled" id="enviar" value="Submit">Enviar</button>
                 <div id="cartel" class="cartel">
                 </div>
             </div>
           </form>
         </div>
     </div>
-    
+
+	<div id="map" class="text-center"></div>
     <!-- FOOTER -->
     <div class="footer">
         <ul class="list-inline">
@@ -123,8 +125,14 @@
         </div>
     </div>
 
-    <!-- VINCULO CON AJAX, JQUERY, SCRIPT Y FONT AWESOME -->
-
+    <!-- VINCULO CON AJAX, JQUERY, SCRIPT, API Y FONT AWESOME -->
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCbD_v6CKhANJ37OG-HJaJrOqZK25GTsvg&callback=initMap">
+    </script>
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
     <script>
         $(document).ready(function (){
@@ -140,5 +148,6 @@
     <script src="https://kit.fontawesome.com/995aed6788.js" crossorigin="anonymous"></script>
     <script src="./script/script.js"></script>
     <script src="./script/formulario.js"></script>
+    <script src="./script/map.js"></script>
 </body>
 </html>
