@@ -168,18 +168,23 @@ for(const producto of productos){
     });        
     
     const resultado = document.querySelector("#resultado-total");
+    const cantCarrito = document.querySelector("#cant-producto");
 
     function calcularTotal(){
         let productosLS;
         total = 0;
 
         productosLS = this.obtenerProductosLocalStorage();
-
+        let cantProd = productosLS.length;
+        
         for(let i = 0; i < productosLS.length; i++){
             let item = Number(productosLS[i].precio);
             total = total + item;
+            cantCarrito.style.display = "inline-flex";
         }
+
         resultado.textContent = total;
+        cantCarrito.textContent = cantProd;
     }
 
     function guardarProductosLocalStorage(producto){
