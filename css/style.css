@@ -72,9 +72,10 @@ p{
     background: #ff000082;
     padding: 4px 7px;
     border-radius: 65%;
-    height: 30px;
-    font-weight: bold;
+    height: 20px;
+    font-weight: bolder;
     color: white;
+    font-size: 10px;
 }
 
 .search-area-container{
@@ -231,10 +232,6 @@ a{
     background-color: rgb(207, 201, 201);
 }
 
-.formulario{
-    width: 50%;
-
-}
 
 .form-wrapper{
     display: flex;
@@ -414,4 +411,150 @@ a{
     margin: 21px;
     display: flex;
     justify-content: center;
+}
+
+/* RESPONSIVE  */
+
+@media (max-width: 1160px) {
+    .cerrar-modal{
+        right: 225px;
+    }
+}
+
+@media (max-width: 1022px) {
+    #map{
+        margin-left: 130px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .cerrar-modal{
+        right: 175px;
+    }
+}
+
+@media (max-width: 952px) {
+    .main-container{
+        grid-template-columns: auto auto;
+    }
+
+}
+
+@media (max-width: 900px) {
+    #map{
+        margin-left: 120px;
+    }
+
+    .cerrar-modal{
+        right: 140px;
+    }
+}
+
+@media (max-width: 840px) {
+    #map{
+        margin-left: 110px;
+    }
+}
+
+@media (max-width: 800px) {
+    .cerrar-modal{
+        right: 105px;
+    }
+}
+
+
+@media (max-width: 730px) {
+    .main-container{
+        grid-template-columns: auto;
+        margin: 0;
+    }
+
+    #map{
+        margin-left: 90px;
+    }
+
+}
+
+@media (max-width: 720px) {
+    .cerrar-modal{
+        right: 85px;
+    }
+}
+
+@media (max-width: 675px) {
+    .cerrar-modal{
+        right: 65px;
+    }
+}
+
+
+@media (max-width: 635px) {
+    #map{
+        margin-left: 80px;
+    }
+
+    .search-area-container{
+        grid-column: 2 / 5;
+    }
+
+    .btn-mas-prod{
+        width: 40%;
+    }
+
+    .img-carrito-titulo{
+        display: none;
+    }
+
+}
+
+@media (max-width: 570px) {
+    #map{
+        margin-left: 70px;
+    }
+}
+
+@media (min-width: 500px) {
+    .formulario {
+        width: 50%;
+    }
+}
+
+@media (max-width: 500px) {
+    #map{
+        margin-left: 60px;
+    }
+}
+
+@media (max-width: 465px) {
+    .btn-mas-prod{
+        width: 50%;
+    }
+}
+
+@media (max-width: 410px) {
+    #map{
+        margin-left: 50px;
+    }
+
+    #cant-producto{
+        margin-left: 5px;
+    }
+}
+
+@media (min-width: 360px) {
+    .logo{
+        display: none;
+    }
+}
+
+@media (max-width: 360px) {
+    .btn-mas-prod{
+        width: 60%;
+    }
+}
+
+@media (max-width: 260px) {
+    .btn-mas-prod{
+        width: 70%;
+    }
 }
